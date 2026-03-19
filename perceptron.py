@@ -44,15 +44,18 @@ def predict(point, w1, w2, b):
     """
     pass
 
-
 # --- PERSONNE 5 : feature output ---
 def print_predict_all(points, labels, w1, w2, b):
     """
     TODO: Pour chaque point, afficher "Attendu: y | Prédit: y_hat".
     Afficher les poids finaux w1, w2 et b arrondis à 4 décimales.
     """
-    pass
 
+    for i in range(len(points)):
+        y_hat = predict(point[i], w1, w2, b)
+        print(f"Attendu: {labels[i]} | Prédit: {y_hat}")
+
+    print(f"Les poids finaux sont w1 = {w1:.4f}, w2 = {w2:.4f} et le biais est b = {b:.4f}. ")
 
 # --- MAIN ENGINE (PERSONNE 4 : feature train) ---
 if __name__ == "__main__":
