@@ -28,7 +28,8 @@ def get_data(filename):
 
 # --- PERSONNE 3 : feature prediction ---
 def predict(point, w1, w2, b):
-    int x1,x2=point
+    x1 = point[0]
+    x2 = point[1]
     z=w1*x1+w2*x2+b
     
     return hs(z)
