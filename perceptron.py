@@ -34,16 +34,16 @@ def predict(point, w1, w2, b):
     """
     pass
 
-
 # --- PERSONNE 5 : feature output ---
-def print_predict_all(points, labels, predict, w1, w2, b):
+def print_predict_all(points, labels, w1, w2, b):
     """
     TODO: Pour chaque point, afficher "Attendu: y | Prédit: y_hat".
     Afficher les poids finaux w1, w2 et b arrondis à 4 décimales.
     """
+    y_hat = predict(points, w1, w2, b)
     for (x1, x2), y in zip(points, labels):
         
-        print(f"Attendu: {labels} | Prédit: {predict}")
+        print(f"Attendu: {y} | Prédit: {y_hat}")
 
     print(f"Les poids finaux sont w1 = {w1:.4f}, w2 = {w2:.4f} et le biais est b = {b:.4f}. ")
 
@@ -70,4 +70,5 @@ if __name__ == "__main__":
     print("Entraînement terminé.")
 
     # 3. Affichage des résultats (Appel de la fonction de P5)
-    # print_predict_all(points, labels, w1, w2, b)
+    pass
+    #print_predict_all(points, labels, w1, w2, b)
