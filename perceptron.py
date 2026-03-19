@@ -20,6 +20,14 @@ def get_data(filename):
     pass
 
 
+# --- PERSONNE 3 : feature prediction ---
+def predict(point, w1, w2, b):
+    x1 = point[0]
+    x2 = point[1]
+    z=w1*x1+w2*x2+b
+    
+    return hs(z)
+
 # --- PERSONNE 1 : feature input ---
 def get_data(filename):
     points = []
