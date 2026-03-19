@@ -17,13 +17,20 @@ def relu(x):
     pass
 
 
-# --- PERSONNE 1  : feature input ---
+# --- PERSONNE 1 : feature input ---
 def get_data(filename):
-    """
-    TODO: Lire le fichier filename.
-    Retourner une liste de points [[x1, x2], ...] et une liste de labels [y, ...].
-    """
-    pass
+    points = []
+    labels = []
+    with open(filename, 'r') as f: 
+        for line in f:
+            values = line.strip().split()
+            x1 = int(values[0])
+            x2 = int(values[1])
+            y = int(values[2])
+            points.append([x1, x2])
+            labels.append(y)
+    return points, labels 
+    
 
 
 # --- PERSONNE 3 : feature prediction ---
@@ -70,5 +77,4 @@ if __name__ == "__main__":
     print("Entraînement terminé.")
 
     # 3. Affichage des résultats (Appel de la fonction de P5)
-    pass
-    #print_predict_all(points, labels, w1, w2, b)
+    # print_predict_all(points, labels, w1, w2, b)
