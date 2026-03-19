@@ -2,14 +2,19 @@
 PROJET : PERCEPTRON COLLABORATIF
 EQUIPE : 6 DEVELOPPEURS
 """
+
 # --- PERSONNE 2 : feature activation function ---
 def hs(x):
-    if x > 0 :
-        return 1
+    """
+    TODO: Retourner 1 si x > 0, sinon 0.
+    """
+    pass
 
 def relu(x):
-    if x > 0:
-        return x
+    """
+    TODO: Retourner x si x > 0, sinon 0.
+    """
+    pass
 
 
 # --- PERSONNE 1 : feature input ---
@@ -48,9 +53,6 @@ def print_predict_all(points, labels, w1, w2, b):
 
 # --- MAIN ENGINE (PERSONNE 4 : feature train) ---
 if __name__ == "__main__":
-
-    points, labels = get_data("data.txt")
-    print(points, labels)
     # Paramètres d'apprentissage
     lr = 0.1
     epochs = 20
