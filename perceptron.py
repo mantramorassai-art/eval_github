@@ -68,11 +68,20 @@ if __name__ == "__main__":
 
     print("Début de l'entraînement...")
 
-    # TODO PERSONNE 4 : Coder la boucle d'apprentissage ici
-    # Indice : Pour chaque époque et chaque point :
-    #   y_hat = predict(...)
-    #   error = target - y_hat
-    #   Mise à jour de w1, w2 et b selon la formule apprise
+    for iteration in range(10000) :
+        y_hat = predict(points, w1, w2, b)
+        error = target - y_hat
+        
+        grads_w2 = []
+        for j in range(len(points)):
+            w_temp = w2[j] + epochs
+            y_temp = predict(points, w1, w_temp, b)
+            error_temp = y_temp - y_true
+            grad = (error_temp - error) / epochs
+            grads_w2.append(grad)
+
+        for j in range(len(points)):
+            w2[j] -= lr * grads_w2[j]
     
     print("Entraînement terminé.")
 
