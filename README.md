@@ -44,9 +44,9 @@ x1 x2 label
 
 Exemple :
 ```
-1 2 1
-3 4 1
 0 0 0
+0 1 0
+1 1 0
 ```
 
 ---
@@ -66,8 +66,8 @@ python perceptron.py
 ```
 Début de l'entraînement...
 Entraînement terminé.
-Attendu: 1 | Prédit: 1
-Attendu: 1 | Prédit: 1
+Attendu: 0 | Prédit: 0
+Attendu: 0 | Prédit: 0
 Attendu: 0 | Prédit: 0
 ...
 Les poids finaux sont w1 = 0.1000, w2 = 0.2000 et le biais est b = 0.1000.
